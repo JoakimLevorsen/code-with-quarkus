@@ -1,0 +1,9 @@
+version: '3'
+services:
+  joakimsCoolProjektJo:
+    build: .
+    image: joakimsCoolProjektJo
+    container_name: joakimsCoolProjektJo 
+    ports:
+     - "6969:6969"
+
