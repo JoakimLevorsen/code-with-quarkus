@@ -9,8 +9,4 @@ mvn package -Dquarkus.package.type=uber-jar
 # code-with-quarkus direcgtory
 docker-compose up -d
 # clean up images
-docker image prune -f 
-popd
-
-# Give the Web server a chance to finish start up
-sleep 2s
+docker image prune -f
