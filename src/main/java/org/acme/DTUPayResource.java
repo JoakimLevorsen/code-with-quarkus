@@ -85,47 +85,4 @@ public class DTUPayResource {
         }
     }
 
-    // @POST
-    // @Produces(MediaType.APPLICATION_JSON)
-    // public Response transfer(Transfer transferData) {
-    // if (merchants == null || customers == null)
-    // initializeValues();
-    // var reciver = merchants.get(transferData.merchantID);
-    // if (reciver == null) {
-    // return Response.status(Response.Status.PRECONDITION_FAILED)
-    // .entity(String.format("merchant with id %s is unknown",
-    // transferData.merchantID)).build();
-    // // return new Error(String.format("merchant with id %s is unknown",
-    // // transferData.merchantID));
-    // }
-    // var provider = customers.get(transferData.customerID);
-    // if (provider == null) {
-    // return Response.status(Response.Status.PRECONDITION_FAILED)
-    // .entity(String.format("customer with id %s is unknown",
-    // transferData.customerID)).build();
-    // }
-
-    // reciver.transfers.add(transferData);
-    // provider.transfers.add(transferData);
-
-    // return Response.status(Response.Status.OK).entity("Transfer
-    // complete").build();
-    // }
-
-    @GET
-    @Path("/transactions/{id}")
-    // @Produces(MediaType.APPLICATION_JSON)
-    public Response getTransfers(@PathParam String id) {
-        var merchant = merchants.get(id);
-        if (merchant != null) {
-            return Response.ok(merchant.transfers.toArray()).build();
-        }
-        var customer = customers.get(id);
-        if (customer != null) {
-            return Response.ok(customer.transfers.toArray()).build();
-        }
-        return Response.status(Response.Status.BAD_REQUEST).entity("Unknown
-        user").build();
-    }
-
 }
