@@ -1,9 +1,9 @@
 version: '3'
 services:
-  joakimsCoolProjektJo:
+  joakims_cool_projekt_med_kun_lowercase:
     build: .
-    image: joakimsCoolProjektJo
-    container_name: joakimsCoolProjektJo 
+    image: joakims_cool_projekt_med_kun_lowercase
+    container_name: joakims_cool_projekt_med_kun_lowercase 
     volumes:
      - "/var/run/docker.sock:/var/run/docker.sock"
     ports:
