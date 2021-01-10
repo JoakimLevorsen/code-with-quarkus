@@ -4,7 +4,7 @@ services:
     build: .
     image: joakimsCoolProjektJo
     container_name: joakimsCoolProjektJo 
-    volume:
+    volumes:
      - "/var/run/docker.sock:/var/run/docker.sock"
     ports:
      - "6969:6969"
