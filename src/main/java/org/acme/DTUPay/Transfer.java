@@ -1,7 +1,10 @@
 package org.acme.DTUPay;
 
+import java.math.BigDecimal;
+
 public class Transfer {
-    public String merchantID;
-    public String customerID;
-    public double amount;
+    public BigDecimal amount;
+	public String from;
+	public String to;
+	public String description;
 }
